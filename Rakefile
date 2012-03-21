@@ -6,7 +6,12 @@ BUILD_DIR = File.expand_path(File.join(File.dirname(__FILE__), "build"))
 build_id = ENV.has_key?("BUILD_ID") ? ENV["BUILD_ID"].dup : "1"
 build_id.gsub!('-', '')
 
-task :default do
+task :clean do
+  sh("rm -f *.rpm")
+  sh("rm -f *.deb")
+end
+
+task :default => :clean do
   sh("mkdir -p #{BUILD_DIR}/usr/bin")
   sh("cp #{TOP_DIR}/fantastic.sh #{BUILD_DIR}/usr/bin")
   sh("chmod 755 #{BUILD_DIR}/usr/bin/fantastic.sh")
