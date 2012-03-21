@@ -3,7 +3,7 @@ require 'rake'
 
 TOP_DIR = File.expand_path(File.join(File.dirname(__FILE__)))
 BUILD_DIR = File.expand_path(File.join(File.dirname(__FILE__), "build"))
-build_id = ENV.has_key?("BUILD_ID") ? ENV["BUILD_ID"] : 1
+build_id = ENV.has_key?("BUILD_ID") ? ENV["BUILD_ID"].dup : "1"
 build_id.gsub!('-', '')
 
 task :default do
