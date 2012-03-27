@@ -2,10 +2,10 @@
   "conditions": { 
     "by fqdn": { 
       "attribute": [ "fqdn" ],
-       "query": "fqdn:*" 
+      "query": "fqdn:*" 
     } 
   }, 
   "random_wait": 10,
   "retry_count": 0, 
-  "operator":"or", 
+  "operator":"or"
 }
