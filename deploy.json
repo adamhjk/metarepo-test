@@ -1,8 +1,8 @@
 { 
   "conditions": { 
     "by fqdn": { 
-      "attribute": [ "dc" ],
-      "query": "recipe:fantastic AND dc:*" 
+      "attribute": [ "fqdn" ],
+      "query": "fqdn:*" 
     } 
   }, 
   "random_wait": 10,
