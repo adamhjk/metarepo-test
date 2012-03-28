@@ -1,11 +1,11 @@
 { 
   "conditions": { 
     "by fqdn": { 
-      "attribute": [ "dc" ],
-      "query": "recipe:fantastic AND dc:*" 
+      "attribute": [ "fqdn" ],
+      "query": "fqdn:*" 
     } 
   }, 
   "random_wait": 10,
-  "retry_count": 10, 
+  "retry_count": 0, 
   "operator":"or"
 }
